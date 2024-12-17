@@ -1,0 +1,33 @@
+---
+import ProductCardComponent from "./ProductCard.astro";
+
+const products = [
+  {
+    name: "Product 1",
+    description: "Description 1",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Product 2",
+    description: "Description 2",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Product 3",
+    description: "Description 3 lorem ipsum dolor sit amet",
+    image: "https://via.placeholder.com/150",
+  },
+];
+---
+
+<div class="flex flex-row flex-wrap items-center justify-around h-screen">
+  {
+    products.map((product) => (
+      <ProductCardComponent
+        name={product.name}
+        description={product.description}
+        image={product.image}
+      />
+    ))
+  }
+</div>

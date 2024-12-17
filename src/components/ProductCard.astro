@@ -1,0 +1,11 @@
+---
+const { name, description, image } = Astro.props;
+---
+
+<div
+  class="bg-white p-4 rounded-md shadow-sm hover:shadow-lg transition-all duration-100 hover:cursor-pointer"
+>
+  <h1 class="text-xl font-bold">{name}</h1>
+  <p class="text-sm text-gray-500">{description}</p>
+  <img src={image} alt={name} class="w-full h-auto" />
+</div>
